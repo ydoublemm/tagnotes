@@ -1,0 +1,22 @@
+/*阴影效果*/
+.ant-layout-header{
+     -moz-box-shadow:0 1px 5px rgba(0,0,0,.1);
+     -webkit-box-shadow:0 1px 5px rgba(0,0,0,.1);
+     box-shadow:0 1px 5px rgba(0,0,0,.1);
+ }
+
+.ant-layout-header img{
+    width: 30px;
+}
+
+.gutter-example .ant-row > div {
+    background: transparent;
+    border: 0;
+}
+.gutter-box {
+    background: #00A0E9;
+    padding: 10px 0;
+    height: 100px;
+
+}
+
