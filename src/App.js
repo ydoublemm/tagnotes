@@ -4,19 +4,18 @@ import React, { Component } from 'react';
 import Responsive from 'react-responsive';
 
 
-import { Layout,Card } from 'antd';
+import { Layout,Card ,Button ,} from 'antd';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import './assests/css/header.css'
 
 import ContentGrid from './components/common/ContentGrid'
 
+import HeaderGrid from './components/common/HeaderGrid'
 
+import Login from  './components/common/NormalLoginForm'
 
-const Desktop = props => <Responsive {...props} minWidth={992} />;// >992
-const Tablet = props => <Responsive {...props} minWidth={768} maxWidth={991} />; //768-991
-const Mobile = props => <Responsive {...props} maxWidth={767} />; // <767
-
-
+import MainContent from './components/common/MainContent'
 
 
 
@@ -40,39 +39,12 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-
-         {/* <Desktop>
-*/}
-          <Layout>
-              <Header style={{ position: 'fixed', zIndex: 1, width: '100%',backgroundColor:'#fff'  }}>
-                  <div style={{paddingLeft:'10%'}}><img src={require('./assests/images/tag.png')}/> TagNotes</div>
-              </Header>
-
-              <Content style={{ padding: '0 50px', marginTop: 64 }}>
-                  <div style={{ background: '#fff', padding: 24, minHeight: 380 }}>
-
-                      <ContentGrid/>
-
-                  </div>
-              </Content>
-
-
-              <Footer style={{ textAlign: 'center' }}>
-                  Ant Design ©2018 Created by Ant UED
-              </Footer>
-          </Layout>
-
-
-        {/*  </Desktop>
-          <Tablet>
-              768-991
-          </Tablet>
-          <Mobile>
-              767
-          </Mobile>*/}
-
-      </div>
+        <Router>
+            <div>
+                <Route exact path="/" component={Login} />
+                <Route path="/mainContent" component={MainContent} />
+            </div>
+        </Router>
     );
   }
 }

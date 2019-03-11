@@ -1,7 +1,7 @@
 import React from 'react'
 
 import {
-     Row, Col
+    Row, Col
 } from 'antd';
 
 import ContentCard from './ContentCard'
@@ -9,44 +9,34 @@ import ContentCard from './ContentCard'
 //栅格布局
 class ContentGrid extends React.Component {
 
-      // 构造
-      constructor(props) {
+    // 构造
+    constructor(props) {
         super(props);
         // 初始状态
         this.state = {
-            list:[1,2,3,4,5,6,7,8]
         };
-      }
+    }
 
 
 
     render() {
         return (
-            <div>
-                <div>
+                <div style={{float:'left'}}>
                     <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-                        {
-                            this.state.list.map((value)=>{
 
-                                return  (
-                                    <Col xs={{ span: 24 }}
-                                             sm={{ span: 12}}
-                                             lg={{ span: 8 }}
-                                             md={{ span: 8}}
-                                             xl={{ span: 6}}
-                                             xxl={{ span: 6 }}
-                                             style={{marginBottom:'20px'}}
+                        <Col xs={{ span: 24 }}
+                             sm={{ span: 12}}
+                             lg={{ span: 8 }}
+                             md={{ span: 8}}
+                             xl={{ span: 6}}
+                             xxl={{ span: 6 }}
+                        >
 
-                                    >
-                                        <ContentCard/>
-                                    </Col>
-                                )
-                            })
-                        }
+                        </Col>
+
 
                     </Row>
                 </div>
-            </div>
         );
     }
 }

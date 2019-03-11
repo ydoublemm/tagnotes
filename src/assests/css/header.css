@@ -9,14 +9,42 @@
     width: 30px;
 }
 
-.gutter-example .ant-row > div {
-    background: transparent;
-    border: 0;
-}
-.gutter-box {
-    background: #00A0E9;
-    padding: 10px 0;
-    height: 100px;
 
+/* content*/
+@media  only screen and (min-width: 768px) {
+    .content-warp {
+        margin: 0 50px;
+
+    }
 }
 
+
+@media  only screen and (min-width: 992px) {
+    .content-warp {
+        margin: 0 150px;
+    }
+}
+
+@media  only screen and (min-width: 1200px) {
+    .content-warp {
+        margin: 0 200px;
+    }
+}
+
+/* 登陆框*/
+
+
+
+.logo{
+    padding-left: 30%;
+    padding-bottom: 20px;
+}
+
+.logo-text {
+    display: inline-block;
+    padding: 10px;
+}
+.logo img{
+    width: 50px;
+    padding-bottom:5% ;
+}
